@@ -1,0 +1,84 @@
+//     @include breakpoint-up(large) {
+//       flex: 1;
+//       background-image: none;
+//       min-height: 40.1875rem;
+
+//       &::before {
+//         content: '';
+//         position: absolute;
+//         width: 140%;
+//         height: 100%;
+//         background-image: url('/images/illustration-laptop-desktop.svg');
+//         background-size: contain;
+//         background-repeat: no-repeat;
+//         background-position: right center;
+//         right: 27%;
+//       }
+//     }
+//   }
+
+.blockC {
+  text-align: center;
+
+  .f-box-c {
+    @include breakpoint-up(large) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__image {
+    position: relative;
+    background-image: url('/images/illustration-laptop-mobile.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    min-height: 17.75rem; //284px
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      background-image: none;
+
+      &::after {
+        content: '';
+        position: absolute;
+        width: 140%;
+        height: 780px;
+        background-image: url('/images/illustration-laptop-desktop.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: right center;
+        right: 28%;
+        top: -265px;
+      }
+    }
+  }
+
+  &__text {
+    h3 {
+      font-size: 1.85rem;
+      line-height: 1.15;
+      color: $veryDarkGrayBlue;
+      margin-bottom: 1.4375rem;
+    }
+
+    p {
+      font-size: $font-med;
+      color: $veryDarkDesaturatedBlue;
+      margin-bottom: 3rem;
+    }
+
+    @include breakpoint-up(large) {
+      flex: 1;
+      text-align: left;
+      h3 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
